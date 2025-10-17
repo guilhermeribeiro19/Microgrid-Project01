@@ -1,11 +1,14 @@
 import pandas as pd
-from pathlib import Path
 
-def parse_timestamps(df: pd.DataFrame) -> pd.DataFrame:
-    """Convert 'index' column to proper datetime index."""
+def standardize(df: pd.DataFrame) -> pd.DataFrame:
+    df.columns = [c.lower().strip() for c in df.columns]
+    df["timestamp"] = pd.to_datetime(df["timestamp"])
+    df = df.sort_values("timestamp").set_index("timestamp")
 
-def validate_measurements(df: pd.DataFrame) -> pd.DataFrame:
-    """Validate measurement columns (ranges, units, missing values)."""
+    # Resample hourly mean (if data is sub-hourly)
+    # Use lowercase 'h' to avoid pandas FutureWarning
+    df = df.resample("1h").mean()
 
-def clean_dataset(df: pd.DataFrame) -> pd.DataFrame:
-    """Run full cleaning pipeline on raw data."""
+    # Drop missing values
+    df = df.dropna()
+    return df
