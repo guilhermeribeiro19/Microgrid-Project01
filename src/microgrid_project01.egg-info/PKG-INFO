@@ -1,3 +1,22 @@
+Metadata-Version: 2.4
+Name: microgrid-project01
+Version: 0.0.1
+Summary: Energy Data Exploration and Visualization for Microgrids
+Author: Guilherme Ribeiro
+Project-URL: Homepage, https://github.com/guilhermeribeiro19/Microgrid-Project01
+Project-URL: Issues, https://github.com/guilhermeribeiro19/Microgrid-Project01/issues
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: pandas>=2.2.0
+Requires-Dist: numpy>=1.26.0
+Requires-Dist: plotly>=5.20.0
+Requires-Dist: matplotlib>=3.9.0
+Requires-Dist: pyarrow>=15.0.0
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0.0; extra == "dev"
+Requires-Dist: ruff>=0.5.0; extra == "dev"
+Requires-Dist: pre-commit>=3.6.0; extra == "dev"
+
 # Microgrid-Project01
 
 **Energy Data Exploration & Visualization**
