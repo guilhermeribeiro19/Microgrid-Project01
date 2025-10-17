@@ -1,0 +1,28 @@
+
+[project]
+name = "microgrid-project01"
+version = "0.0.1"
+authors = [
+  { name="Guilherme Ribeiro"},
+]
+description = "Energy Data Exploration and Visualization for Microgrids"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pandas>=2.2.0",
+    "numpy>=1.26.0",
+    "plotly>=5.20.0",
+    "matplotlib>=3.9.0",
+    "pyarrow>=15.0.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0", "ruff>=0.5.0", "pre-commit>=3.6.0"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[project.urls]
+Homepage = "https://github.com/guilhermeribeiro19/Microgrid-Project01"
+Issues = "https://github.com/guilhermeribeiro19/Microgrid-Project01/issues"
