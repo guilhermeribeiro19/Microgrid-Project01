@@ -1,0 +1,61 @@
+# Data
+# ignore raw data (keep processed or small sample files out of VCS if desired)
+data/raw/
+# optionally keep processed artifacts out of VCS
+# data/processed/
+
+# Jupyter
+.ipynb_checkpoints
+*.ipynb_checkpoints
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# Virtualenvs / env files
+.venv/
+venv/
+env/
+ENV/
+
+# Data
+# ignore raw data (keep processed or small sample files out of VCS if desired)
+data/raw/
+# optionally keep processed artifacts out of VCS
+# data/processed/
+
+# Jupyter
+.ipynb_checkpoints
+*.ipynb_checkpoints
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# Virtualenvs / env files
+.venv/
+venv/
+env/
+ENV/
+
+# Tooling caches
+.pytest_cache/
+.mypy_cache/
+.cache/
+pip-wheel-metadata/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+*.swp

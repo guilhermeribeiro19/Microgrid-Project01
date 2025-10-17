@@ -1,0 +1,44 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "language": "markdown"
+      },
+      "source": [
+        "## Step 2: Load sample dataset\n",
+        "\n",
+        "Download or place the Kaggle “Microgrid load and generation” CSV into:\n",
+        "\n",
+        "`data/raw/microgrid.csv`\n",
+        "\n",
+        "Then run the code cell below to load the dataset and inspect column names and types. We'll use the column names to adapt `src/*/io.py` loader.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "language": "python"
+      },
+      "source": [
+        "# Quick dataset check\n",
+        "import pandas as pd\n",
+        "from pathlib import Path\n",
+        "\n",
+        "data_path = Path(\"data/raw/microgrid.csv\")\n",
+        "if not data_path.exists():\n",
+        "    raise FileNotFoundError(f\"Expected dataset at {data_path}. Place the CSV file there or update the path.\")\n",
+        "\n",
+        "df = pd.read_csv(data_path)\n",
+        "print('\\n--- Head (first 5 rows) ---')\n",
+        "display(df.head())\n",
+        "print('\\n--- Columns ---')\n",
+        "print(list(df.columns))\n",
+        "print('\\n--- Dataframe info ---')\n",
+        "df.info()\n",
+        "print('\\n--- Missing values per column ---')\n",
+        "print(df.isna().sum())\n"
+      ]
+    }
+  ]
+}

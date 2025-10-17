@@ -24,6 +24,32 @@ Future versions (v2+) will progressively add forecasting, optimization, and bloc
 ## Technical Stack
 
 | Component | Technology |
+# Microgrid-Project01
+
+**Energy Data Exploration & Visualization**
+
+Microgrid-Project01 is an open-source Python project that focuses on **load and renewable generation analysis**, offering interactive dashboards, reproducible pipelines, and automated reports.
+
+---
+
+## Project Overview
+
+The project analyzes microgrid datasets — typically time-series measurements of load (consumption) and generation (solar PV, wind, etc.) — to uncover energy patterns and insights such as:
+
+- Daily and weekly load vs. generation profiles
+- Peak and off-peak behavior
+- Renewable utilization and self-consumption rates
+- Excess renewable vs. grid import periods
+- Key summary statistics and visual narratives
+
+Version 1 (v1) focuses purely on **dataset-only analysis** without weather or pricing data.
+Future versions (v2+) will progressively add forecasting, optimization, and blockchain-based energy trading simulations.
+
+---
+
+## Technical Stack
+
+| Component | Technology |
 |------------|-------------|
 | **Language** | Python 3.12 |
 | **Data Handling** | pandas, numpy, pyarrow |
@@ -33,6 +59,12 @@ Future versions (v2+) will progressively add forecasting, optimization, and bloc
 | **Project Management** | GitHub Projects / Issues |
 
 ---
+## Data
+
+Step 2: Load sample dataset
+
+Download or place the Kaggle dataset "Microgrid load and generation" CSV into:
+`data/raw/microgrid.csv`
 
 ## Quickstart
 
